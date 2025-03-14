@@ -8,11 +8,47 @@
     <script src="./controller.js" type="module"></script>
 </head>
 <body>
+    <header>
+    <div id="L/D_mode" class="light">Light Mode</div>
     <form>
         <label for="location">Location</label>
         <input type="text" id="location">
         <button type="button" id="submit_location">Submit</button>
     </form>
+    </header>
+    <today class="weather">
+        <h1>City Name</h1>
+        <h1>Icon</h1>
+        <mainTemp>
+        <h2>Feels like: </h2>
+        <h2 id="feels_temp">temp</h2>
+        </mainTemp>
+        <more_info>
+            <precip>
+                <p>Percent of precipitation: </p>
+                <p id="water" class="api_info">35%</p>
+            </precip>
+            <low_high>
+                <low>
+                    <p>Low: </p>
+                    <p id="low" class="api_info">35</p>
+                </low>
+                <high>
+                    <p>high: </p>
+                    <p id="high" class="api_info">65</p>
+                </high>
+            </low_high>
+            <sunset>
+                <p>Sunset: </p>
+                <p id="sunset" class="api_info">6:05pm</p>
+
+            </sunset>
+        </more_info>
+    </today>
+    <many_days>
+        
+    </many_days>
     <button type="button" id="toggle_api">Toggles api</button>
+    <button type="button" id="random">Random test</button>
 </body>
 </html>

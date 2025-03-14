@@ -1,4 +1,5 @@
 import { api } from "./api_key.js"
+import { convertToAMPM } from "./helper.js"
 let weatherDataManyDays = []
 let todayWeatherData = {}
 let cityName =""
@@ -36,7 +37,7 @@ function todayDate() {
 }
 function nextDays() {
     const cDate = new Date()
-    cDate.setDate(cDate.getDate() + 5)
+    cDate.setDate(cDate.getDate() + 3)
     const year = cDate.getFullYear()
     const month = cDate.getMonth() + 1
     const day = cDate.getDate()
@@ -48,7 +49,7 @@ function reset() {
     weatherDataManyDays = []
 }
 function daysOfWeather(weatherData){
-    for (let i=1; i<6; i++) {
+    for (let i=1; i<4; i++) {
         let arr = {
             day: weatherData.days[i].datetime,
             weather: weatherData.days[i].conditions,
@@ -67,9 +68,8 @@ function todayWeather(weatherData) {
         feelLow:weatherData.days[0].feelslikemin,
         feelHigh: weatherData.days[0].feelslikemax,
         precipation: weatherData.days[0].precipprob,
-        sunset:weatherData.days[0].sunset
+        sunset:convertToAMPM(weatherData.days[0].sunset)
     }
-    console.log("the weather for today is")
     console.log(todayWeatherData)
 
 }
