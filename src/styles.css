@@ -1,0 +1,88 @@
+/* variable name declaration */
+/*how to use js to set custom properties
+https://css-tricks.com/updating-a-css-variable-with-javascript/
+ */
+ /* header */
+:root {
+    --darkest: #218FE4;
+    --light_blue: #5AA9E6;
+}
+body * {
+    border-radius: 8px;
+
+}
+body {
+    background-color: #7FC8F8;
+    display: grid;
+    justify-items: center;
+    grid-template-rows: 2fr 5fr 3fr;
+}
+header {
+    background-color: lightcoral;
+    padding: 5%;
+    display: grid;
+    grid-template-columns: 20% 60% 30%;
+    align-items: center;
+}
+#LD_mode {
+    width: 8em;
+    height: 2.5em;
+    background-color: var(--darkest);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+search {
+    width: 100%;
+    background-color: red;
+}
+form {
+    background-color: var(--light_blue);
+    height: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 12px;
+    gap: 5px;
+}
+input {
+    width: 70%;
+}
+/*body*/
+#city{
+    background-color: red;
+}
+mainTemp {
+    display: flex;
+}
+today {
+    display: grid;
+    grid-template-columns: 50vw;
+    justify-items: center;
+    grid-template-rows: 2fr 2fr 1.5fr 1fr;
+    
+}
+more_info {
+    background-color: lightgreen;
+    display: grid;
+    padding: 0 1em;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+low_high {
+    display: flex;
+    justify-content: space-around;
+}
+low, high {
+    display: flex;
+    gap: .25em
+}
+mainTemp {
+    grid-row: 4;
+}
+
+/*bottom*/
+many_days {
+    display: grid;
+    column-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+}

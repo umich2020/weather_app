@@ -1,54 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
     <script src="./controller.js" type="module"></script>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-    <div id="L/D_mode" class="light">Light Mode</div>
-    <form>
-        <label for="location">Location</label>
-        <input type="text" id="location">
+      <div id="LD_mode" class="light">Light Mode</div>
+      <form>
+        <search>
+          <label for="location">Location</label>
+          <input type="text" id="location" />
+        </search>
         <button type="button" id="submit_location">Submit</button>
-    </form>
+      </form>
     </header>
     <today class="weather">
-        <h1>City Name</h1>
-        <h1>Icon</h1>
-        <mainTemp>
-        <h2>Feels like: </h2>
+      <h1 id="city">City Name</h1>
+      <h1 id="main_weather" class="weather">Weather</h1>
+      <icon>Image</icon>
+      <mainTemp>
+        <h2>Feels like:</h2>
         <h2 id="feels_temp">temp</h2>
-        </mainTemp>
-        <more_info>
-            <precip>
-                <p>Percent of precipitation: </p>
-                <p id="water" class="api_info">35%</p>
-            </precip>
-            <low_high>
-                <low>
-                    <p>Low: </p>
-                    <p id="low" class="api_info">35</p>
-                </low>
-                <high>
-                    <p>high: </p>
-                    <p id="high" class="api_info">65</p>
-                </high>
-            </low_high>
-            <sunset>
-                <p>Sunset: </p>
-                <p id="sunset" class="api_info">6:05pm</p>
-
-            </sunset>
-        </more_info>
+      </mainTemp>
+      <more_info>
+        <precip>
+          <p>Percent of precipitation:</p>
+          <p id="water" class="api_info">35%</p>
+        </precip>
+        <low_high>
+          <low>
+            <p>Low:</p>
+            <p id="low" class="api_info">35</p>
+          </low>
+          <high>
+            <p>high:</p>
+            <p id="high" class="api_info">65</p>
+          </high>
+        </low_high>
+        <sunset>
+          <p>Sunset:</p>
+          <p id="sunset" class="api_info">6:05pm</p>
+        </sunset>
+      </more_info>
     </today>
     <many_days>
-        
+      <!-- This is going to be a temporary item to work with css -->
+      <day>
+        <h2 class="weather">Weather2</h2>
+        <icon>Image</icon>
+        <h3>Actual Weather</h3>
+        <low_high>
+          <low>
+            <p>Low:</p>
+            <p id="low" class="api_info">35</p>
+          </low>
+          <high>
+            <p>high:</p>
+            <p id="high" class="api_info">65</p>
+          </high>
+        </low_high>
+      </day>
+      <day>
+        <h2 class="weather">Weather2</h2>
+        <icon>Image</icon>
+        <h3>Actual Weather</h3>
+        <low_high>
+          <low>
+            <p>Low:</p>
+            <p id="low" class="api_info">35</p>
+          </low>
+          <high>
+            <p>high:</p>
+            <p id="high" class="api_info">65</p>
+          </high>
+        </low_high>
+      </day>
     </many_days>
     <button type="button" id="toggle_api">Toggles api</button>
     <button type="button" id="random">Random test</button>
-</body>
+  </body>
 </html>
