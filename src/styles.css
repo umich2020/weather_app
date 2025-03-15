@@ -2,91 +2,125 @@
 /*how to use js to set custom properties
 https://css-tricks.com/updating-a-css-variable-with-javascript/
  */
- /* header */
+/* header */
 :root {
-    --darkest: #218FE4;
-    --light_blue: #5AA9E6;
+  --darkest: #218fe4;
+  --light_blue: #5aa9e6;
+  --lightest: #7FC8F8;
+  --white: #F9F9F9;
 }
 body * {
-    border-radius: 8px;
-
+  border-radius: 8px;
 }
 body {
-    background-color: #7FC8F8;
-    display: grid;
-    justify-items: center;
-    grid-template-rows: 2fr 5fr 3fr;
+  background-color: var(--lightest);
+  display: grid;
+  justify-items: center;
+  grid-template-rows: 150px 3fr 3fr;
+  row-gap: 16px;
 }
 header {
-    background-color: lightcoral;
+    background-color: var(--light_blue);
     padding: 5%;
     display: grid;
-    grid-template-columns: 20% 60% 30%;
+    width: 50%;
+    grid-template-columns: 20% 60% 20%;
+    gap: 8px;
     align-items: center;
+    height: min(100px,3em);
 }
 #LD_mode {
-    width: 8em;
-    height: 2.5em;
-    background-color: var(--darkest);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: min(8em,90px);
+  height: 100%;
+  background-color: var(--darkest);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 search {
+    gap: 4px;
     width: 100%;
-    background-color: red;
-}
-form {
-    background-color: var(--light_blue);
-    height: 3em;
+    height: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 0px 12px;
-    gap: 5px;
+    padding: 8px;
+}
+form {
+  background-color: var(--darkest);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 12px;
+  gap: 5px;
+}
+#submit_location {
+    background-color: var(--darkest);
+    height: 100%;
+    color: var(--white);
+    border: none;
 }
 input {
-    width: 70%;
+  width: 70%;
 }
 /*body*/
 img {
-    width: 100px;
-    height: 100px;
-}
-#city{
-    background-color: red;
+  width: 100px;
+  height: 100px;
 }
 mainTemp {
-    display: flex;
+  display: flex;
 }
-today {
-    display: grid;
-    grid-template-columns: 50vw;
-    justify-items: center;
-    grid-template-rows: 2fr 2fr 1.5fr 1fr;
-    
+today,
+day {
+  display: grid;
+  grid-template-columns: min(50vw,500px);
+  height: 50vh;
+  justify-items: center;
+  grid-template-rows: 2fr 2fr 1.5fr 1fr;
+  background-color: var(--light_blue);
 }
 more_info {
-    background-color: lightgreen;
-    display: grid;
+    background-color: var(--light_blue);
+    display: grid
+;
     padding: 0 1em;
     grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    text-align: center;
 }
 low_high {
-    display: flex;
-    justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
+  column-gap: 12px;
 }
-low, high {
-    display: flex;
-    gap: .25em
+low,
+high {
+  display: flex;
+  gap: 0.25em;
 }
 mainTemp {
-    grid-row: 4;
+  grid-row: 4;
 }
 
 /*bottom*/
 many_days {
-    display: grid;
-    column-gap: 20px;
-    grid-template-columns: 1fr 1fr 1fr;
+  display: grid;
+  column-gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+day {
+  grid-template-columns: 30vw;
+}
+day h3 {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+day low_high {
+width: 50%;}
+
+/* Text edits */
+.api_info {
+    font-weight: 700;
 }
