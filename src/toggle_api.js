@@ -68,7 +68,8 @@ function todayWeather(weatherData) {
         feelLow:weatherData.days[0].feelslikemin,
         feelHigh: weatherData.days[0].feelslikemax,
         precipation: weatherData.days[0].precipprob,
-        sunset:convertToAMPM(weatherData.days[0].sunset)
+        sunset:convertToAMPM(weatherData.days[0].sunset),
+        icon: weatherData.days[0].icon
     }
     console.log(todayWeatherData)
 

@@ -23,3 +23,10 @@ by what type of weather is it. Shorts? Jacket? Jeans? Boots for snow
 -Remember to have a default city  
 ### Styling Notes
 -Format the date so it doesn't show the year
+
+##### Icons
+* Shorts
+* Short sleeve
+* Jeans
+* Jacket
+* Coat
