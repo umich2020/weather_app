@@ -3,16 +3,16 @@ export function whichIcon (temp) {
 
     switch (true) {
         case (temp >70):
-        return "./icons/shorts_icon.png"
+        return "./src/icons/shorts_icon.png"
 
         case temp > 60:
-            return "./icons/polo_shirt_icon.png"
+            return "./src/icons/polo_shirt_icon.png"
         case temp > 50:
-            return "./icons/jeans_icon.png"
+            return "./src/icons/jeans_icon.png"
         case temp > 40:
-            return "./icons/jacket_icon.png"
+            return "./src/icons/jacket_icon.png"
         default:
-            return "./icons/coat_icon.png"
+            return "./src/icons/coat_icon.png"
     }
 }
 // console.log(whichIcon(77))
