@@ -8,15 +8,17 @@ https://css-tricks.com/updating-a-css-variable-with-javascript/
   --light_blue: #5aa9e6;
   --lightest: #7FC8F8;
   --white: #F9F9F9;
+  --text: black;
 }
 body * {
   border-radius: 8px;
+  color: var(--text);
 }
 body {
   background-color: var(--lightest);
   display: grid;
   justify-items: center;
-  grid-template-rows: 150px 3fr 3fr;
+  grid-template-rows: min(150px,15vh) 3fr 3fr;
   row-gap: 16px;
 }
 header {
@@ -27,7 +29,7 @@ header {
     grid-template-columns: 20% 60% 20%;
     gap: 8px;
     align-items: center;
-    height: min(100px,3em);
+    height: min(100px,1em);
 }
 #LD_mode {
   width: min(8em,90px);
