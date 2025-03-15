@@ -1,6 +1,6 @@
 import { api } from "./api_key.js"
 import { convertToAMPM } from "./helper.js"
-let weatherDataManyDays = []
+export let weatherDataManyDays = []
 export let todayWeatherData = {}
 let cityName =""
 const toggle_api_button = document.getElementById("toggle_api")
@@ -18,9 +18,9 @@ export async function getApiData(location="ann%20arbor") {
     reset()
     api.link="no change"
     api.link="https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/"+location+"/"+todayDate().yyyymmdd+"/"+nextDays().yyyymmdd+"/"+"?key=WXRK457BK28XNWR775XCD4JY8"
-    console.log('the corrected api link is '+api.link)
     const response = await fetch(api.link, {mode: 'cors'})
     const weatherData = await response.json()
+    console.log("get api data function console")
     console.log(weatherData)
     cityName = weatherData.address
     daysOfWeather(weatherData)
@@ -70,6 +70,7 @@ export function todayWeather(weatherData) {
         sunset:convertToAMPM(weatherData.days[0].sunset),
         address: weatherData.address
     }
+    console.log("todayweatehr function ")
     console.log(todayWeatherData)
 
 }

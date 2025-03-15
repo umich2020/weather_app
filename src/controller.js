@@ -1,4 +1,4 @@
-import { getValue } from "./search_bar.js";
 import {toggleKey} from "./toggle_api.js"
-getValue()
+import { clickingSubmitValue } from "./search_bar.js";
 toggleKey()
+clickingSubmitValue()
