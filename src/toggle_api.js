@@ -1,22 +1,21 @@
 import { api } from "./api_key.js"
 import { convertToAMPM } from "./helper.js"
 let weatherDataManyDays = []
-let todayWeatherData = {}
+export let todayWeatherData = {}
 let cityName =""
 const toggle_api_button = document.getElementById("toggle_api")
 const test = document.getElementById("random")
 
 export function toggleKey () {
         toggle_api_button.addEventListener("click", ()=> {
-        reset()
-        // api.link = "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/ann%20arbor/2025-3-13/2025-3-15?key=WXRK457BK28XNWR775XCD4JY8"
         getApiData()
    })
 }
 function checkAPI(message) {
     console.log(message)
 }
-async function getApiData(location="ann%20arbor") {
+export async function getApiData(location="ann%20arbor") {
+    reset()
     api.link="no change"
     api.link="https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/"+location+"/"+todayDate().yyyymmdd+"/"+nextDays().yyyymmdd+"/"+"?key=WXRK457BK28XNWR775XCD4JY8"
     console.log('the corrected api link is '+api.link)
@@ -48,7 +47,7 @@ console.log(nextDays())
 function reset() {
     weatherDataManyDays = []
 }
-function daysOfWeather(weatherData){
+export function daysOfWeather(weatherData){
     for (let i=1; i<4; i++) {
         let arr = {
             day: weatherData.days[i].datetime,
@@ -60,7 +59,7 @@ function daysOfWeather(weatherData){
     }
     console.log(weatherDataManyDays)
 }
-function todayWeather(weatherData) {
+export function todayWeather(weatherData) {
     todayWeatherData = {
         day: weatherData.days[0].datetime,
         weather: weatherData.days[0].conditions,
@@ -69,7 +68,7 @@ function todayWeather(weatherData) {
         feelHigh: weatherData.days[0].feelslikemax,
         precipation: weatherData.days[0].precipprob,
         sunset:convertToAMPM(weatherData.days[0].sunset),
-        icon: weatherData.days[0].icon
+        address: weatherData.address
     }
     console.log(todayWeatherData)
 

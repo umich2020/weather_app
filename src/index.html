@@ -6,6 +6,7 @@
     <title>Weather App</title>
     <link rel="stylesheet" href="styles.css" />
     <script src="./controller.js" type="module"></script>
+    <script src="./dom_show.js" type="module"></script>
   </head>
   <body>
     <header>
@@ -19,12 +20,12 @@
       </form>
     </header>
     <today class="weather">
-      <h1 id="city">City Name</h1>
-      <h1 id="main_weather" class="weather">Weather</h1>
-      <icon>Image</icon>
+      <h1 id="city" class="api_info">City Name</h1>
+      <h1 id="main_weather" class="weather api_info">Weather</h1>
+      <img id="icon" class="api_info" src="./icons/coat_icon.png" alt="image of clothing"/>
       <mainTemp>
         <h2>Feels like:</h2>
-        <h2 id="feels_temp">temp</h2>
+        <h2 id="feels_temp" class="api_info">temp</h2>
       </mainTemp>
       <more_info>
         <precip>
@@ -51,22 +52,7 @@
       <!-- This is going to be a temporary item to work with css -->
       <day>
         <h2 class="weather">Weather2</h2>
-        <icon>Image</icon>
-        <h3>Actual Weather</h3>
-        <low_high>
-          <low>
-            <p>Low:</p>
-            <p id="low" class="api_info">35</p>
-          </low>
-          <high>
-            <p>high:</p>
-            <p id="high" class="api_info">65</p>
-          </high>
-        </low_high>
-      </day>
-      <day>
-        <h2 class="weather">Weather2</h2>
-        <icon>Image</icon>
+        <img class="" src="./icons/coat_icdfon.png" alt="image of clothing"/>
         <h3>Actual Weather</h3>
         <low_high>
           <low>

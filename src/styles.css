@@ -49,6 +49,10 @@ input {
     width: 70%;
 }
 /*body*/
+img {
+    width: 100px;
+    height: 100px;
+}
 #city{
     background-color: red;
 }
