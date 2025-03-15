@@ -124,3 +124,7 @@ width: 50%;}
 .api_info {
     font-weight: 700;
 }
+/*remove dev buttons*/
+#toggle_api, #random{
+    display: none;
+} 

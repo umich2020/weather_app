@@ -20,7 +20,7 @@ export function showToday() {
   cityName.textContent = todayWeatherData.address;
   weather.textContent = todayWeatherData.weather;
   feelsLike.textContent = todayWeatherData.feelLike;
-  precip.textContent = todayWeatherData.precipation;
+  precip.textContent = todayWeatherData.precipation+"%";
   feelsLow.textContent = todayWeatherData.feelLow;
   feelsHigh.textContent = todayWeatherData.feelHigh;
   sunset.textContent = todayWeatherData.sunset;
