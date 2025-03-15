@@ -87,4 +87,6 @@ rand.addEventListener("click", () => {
   showToday();
   removeManyDays()
   showManyDays()
+
 });
+showManyDays()

@@ -4,4 +4,3 @@ export function removeManyDays() {
         element.remove()
     })
 }
-removeManyDays()
